@@ -77,7 +77,11 @@ public class EnemyClone : MonoBehaviour {
             if (tag == "Clonw")
             {
                 Controller.Score += 3;
-            }else if (tag == "Pyro")
+            }else if (tag == "Assault")
+            {
+                Controller.Score += 5;
+            }
+            else if (tag == "Pyro")
             {
                 Controller.Score += 7;
             }else if (tag == "Sniper")
@@ -174,6 +178,9 @@ public class EnemyClone : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        CanAttack = true;
+        if (collision.tag == "Arena")
+        {
+            CanAttack = true;
+        }
     }
 }

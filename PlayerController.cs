@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour {
         VerticalMove = Input.GetAxisRaw("Vertical") * Speed;
         Vector3 targetVelocity = new Vector2((HorizontalMove * Time.fixedDeltaTime) * 10f, (VerticalMove * Time.fixedDeltaTime) * 10);
         m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-        m_Rigidbody2D.position = new Vector2(Mathf.Clamp(m_Rigidbody2D.position.x, -15.5f, 44.5f), Mathf.Clamp(m_Rigidbody2D.position.y, -6.5f, 36f));
+        m_Rigidbody2D.position = new Vector2(Mathf.Clamp(m_Rigidbody2D.position.x, -15.5f, 47.5f), Mathf.Clamp(m_Rigidbody2D.position.y, -8.5f, 36f));
     }
     void Update () {
         if (Hit.volume != Volume.Hit)

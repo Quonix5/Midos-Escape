@@ -168,6 +168,10 @@ public class PauseMenu : MonoBehaviour {
         Music = music;
         PlayerPrefs.SetFloat("Music", music);
     }
+    public void WeaponBar(bool Weapon)
+    {
+        GameObject.FindGameObjectWithTag("WeaponBar").GetComponent<Animator>().SetBool("Weapon", Weapon);
+    }
     public void Resolution(int quality)
     {
         if (quality == 0)

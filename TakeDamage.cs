@@ -10,4 +10,11 @@ public class TakeDamage : MonoBehaviour
     {
         Health -= damage;
     }
+    public void Update()
+    {
+        if (Health > 100)
+        {
+            Health = 100;
+        }
+    }
 }
